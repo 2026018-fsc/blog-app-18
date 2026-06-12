@@ -1,11 +1,33 @@
 <!DOCTYPE html>
-<html lang="ja">
-<head>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{fragments/layout :: head('ブログ一覧')}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Blogs</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
-    <h1>Spring</h1>
+   <header th:replace="~{fragments/layout :: header('ブログ一覧')}"></header>
+    <div class="title">
+        <h1>All Blogs</h1>
+    </div>
+
+    <div class="titles">
+        <table>
+            <tr th:each="blog : ${blogs}">
+                <td>
+                    <a th:href="@{/blogs/{id}(id=${blog.id})}" th:text="${blog.title}">ブログ</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="newblog">
+    <a href="/newblog">新規投稿はこちら♪</a>
+    </div>
+
 </body>
+
 </html>

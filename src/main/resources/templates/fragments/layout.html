@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="head(title)">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title th:text="${title}">Document</title>
+</head>
+
+<body>
+    <header th:fragment="header(title)">
+        <div class="footer">
+            <header>
+                <li><a href="/blogs">ホーム</a>
+                    <a href="/newblog">新規作成</a>
+                </li>
+            </header>
+        </div>
+    </header>
+</body>
+
+</html>

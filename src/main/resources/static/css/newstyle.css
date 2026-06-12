@@ -1,0 +1,30 @@
+body{
+    background-color: #fbfbfb; 
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    text-align: center;
+}
+a {
+  text-decoration: none !important;
+}
+.title{
+    color: rgb(8, 8, 8);
+    margin: 0;
+    padding: 30px;
+    font-size: 50px;
+    text-decoration: none;
+}
+
+header {
+ background-color: rgb(210, 208, 208);
+ gap: 16px;
+font-size: 20px;
+display: flex;
+text-decoration: none;
+padding: 20px 10px;
+justify-content: flex-end;
+}
+
